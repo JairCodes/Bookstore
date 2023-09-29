@@ -11,7 +11,7 @@ public class App {
     public String makeAnnouncement() {
         return "Starting Project";
     }
-
+    
     public static void main(String[] args) {
         System.out.println(new App().makeAnnouncement());
         // Initialize the Inventory, Pricing, and Sales classes

@@ -11,13 +11,14 @@ public class App {
     public String makeAnnouncement() {
         return "Starting Project";
     }
-    
+
     public static void main(String[] args) {
         System.out.println(new App().makeAnnouncement());
         // Initialize the Inventory, Pricing, and Sales classes
         Inventory inventory = new Inventory();
         Pricing pricing = new Pricing();
         Sales sales = new Sales(inventory, pricing);
+        //testing
 
           // Header
           System.out.printf("%-15s %-15s %-15s%n", "Product", "Availability", "Price");
@@ -47,5 +48,6 @@ public class App {
   
           // Exit the program
           System.out.println("\nExiting the program.");
+          System.out.println("what am i doing");
     }
 }

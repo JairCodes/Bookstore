@@ -48,6 +48,5 @@ public class App {
   
           // Exit the program
           System.out.println("\nExiting the program.");
-          System.out.println("what am i doing");
     }
 }

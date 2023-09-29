@@ -18,7 +18,7 @@ public class App {
         Inventory inventory = new Inventory();
         Pricing pricing = new Pricing();
         Sales sales = new Sales(inventory, pricing);
-        //testing
+//testing
 
           // Header
           System.out.printf("%-15s %-15s %-15s%n", "Product", "Availability", "Price");

@@ -1,5 +1,4 @@
 package bookstoreproject.pricing;
-
 // public class Pricing {
 
 //     private double bookPrice = 10.0;
@@ -33,24 +32,24 @@ public abstract class Pricing {
         }
 }
 
-class Book extends Pricing{
+public class Book extends Pricing{
     // public double price;
     public Book(){
         super(10.0);
     }
 }
-class stationary extends Pricing{
-    public stationary(){
+public class Stationary extends Pricing{
+    public Stationary(){
         super(2.0);
     }
 }
-class pencil extends Pricing{
-    public pencil(){
+public class Pencil extends Pricing{
+    public Pencil(){
         super(1.0);
     }
 }
-class pen extends Pricing{
-    public pen(){
+public class Pen extends Pricing{
+    public Pen(){
         super(1.5);
     }
 }

@@ -7,20 +7,18 @@ import bookstoreproject.pricing.*;
 public class Sales {
 
     private Inventory inventory;
-    private Pricing pricing; //change?
-
+    private Pricing pricing;
+    
     public Sales(Inventory inventory) {
         this.inventory = inventory;
     }
     Pricing product = null;
     product = new Book();
 
-    public Sales(Inventory inventory, Pricing pricing) {
-        this.inventory = inventory;
-        this.pricing = pricing;
-    }
 
+    
     public boolean makeSale(String productType, int quantity) {
+
         Pricing product = null;
 
         switch (productType.toLowerCase()) {
@@ -40,6 +38,7 @@ public class Sales {
                 throw new IllegalArgumentException("Invalid product type: " + productType);
         }
         double price = product.getprice(); //change
+        //double price = productType.getPrice();
         boolean isAvailable = inventory.isAvailable(productType, quantity);
 
         if (isAvailable) {

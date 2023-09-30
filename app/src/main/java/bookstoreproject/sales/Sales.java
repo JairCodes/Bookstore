@@ -3,10 +3,17 @@ package bookstoreproject.sales;
 import bookstoreproject.inventory.*;
 import bookstoreproject.pricing.*;
 
+
 public class Sales {
 
     private Inventory inventory;
-    private Pricing pricing;
+    private Pricing pricing; //change?
+
+    public Sales(Inventory inventory) {
+        this.inventory = inventory;
+    }
+    Pricing product = null;
+    product = new Book();
 
     public Sales(Inventory inventory, Pricing pricing) {
         this.inventory = inventory;
@@ -14,7 +21,25 @@ public class Sales {
     }
 
     public boolean makeSale(String productType, int quantity) {
-        double price = pricing.getPrice(productType);
+        Pricing product = null;
+
+        switch (productType.toLowerCase()) {
+            case "book":
+                product = new Book();
+                break;
+            case "stationary":
+                product = new Stationary();
+                break;
+            case "pencil":
+                product = new Pencil();
+                break;
+            case "pen":
+                product = new Pen();
+                break;
+            default:
+                throw new IllegalArgumentException("Invalid product type: " + productType);
+        }
+        double price = product.getprice(); //change
         boolean isAvailable = inventory.isAvailable(productType, quantity);
 
         if (isAvailable) {

@@ -27,12 +27,12 @@ public abstract class Pricing {
         public Pricing(double price){
             this.price = price;
         }
-        public double getprice(){
+        public double getPrice(){
             return (price);
         }
 }
 
-public class Book extends Pricing{
+ public class Book extends Pricing{
     // public double price;
     public Book(){
         super(10.0);

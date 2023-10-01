@@ -8,18 +8,14 @@ public class Sales {
 
     private Inventory inventory;
 
-    public Sales(Inventory inventory) {
+    public Sales(Inventory inventory){
         this.inventory = inventory;
     }
-    Pricing product = null;
-    product = new Book();
-
-
-    
+  
     public boolean makeSale(String productType, int quantity) {
 
         Pricing product = null;
-
+       // product = new productType();
         switch (productType.toLowerCase()) {
             case "book":
                 product = new Book();
@@ -36,12 +32,15 @@ public class Sales {
             default:
                 throw new IllegalArgumentException("Invalid product type: " + productType);
         }
-        double price = product.getprice();
+        double price = product.getPrice(); //change
+        // System.out.println("this is the product" + product);
+        //double price = productType.getPrice();
         boolean isAvailable = inventory.isAvailable(productType, quantity);
 
         if (isAvailable) {
             inventory.decrementStock(productType, quantity);
             
+            // Update Sales Counter (assuming it's a static class)
             SalesCounter.updateTotalSales(price * quantity);
             SalesCounter.updateTotalUnits(quantity);
             return true;

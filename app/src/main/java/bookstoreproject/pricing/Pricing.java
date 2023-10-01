@@ -32,24 +32,24 @@ public abstract class Pricing {
         }
 }
 
- public class Book extends Pricing{
-    // public double price;
-    public Book(){
-        super(10.0);
-    }
-}
-public class Stationary extends Pricing{
-    public Stationary(){
-        super(2.0);
-    }
-}
-public class Pencil extends Pricing{
-    public Pencil(){
-        super(1.0);
-    }
-}
-public class Pen extends Pricing{
-    public Pen(){
-        super(1.5);
-    }
-}
+//  public class Book extends Pricing{
+//     // public double price;
+//     public Book(){
+//         super(10.0);
+//     }
+// }
+// public class Stationary extends Pricing{
+//     public Stationary(){
+//         super(2.0);
+//     }
+// }
+// public class Pencil extends Pricing{
+//     public Pencil(){
+//         super(1.0);
+//     }
+// }
+// public class Pen extends Pricing{
+//     public Pen(){
+//         super(1.5);
+//     }
+// }

@@ -26,7 +26,7 @@ public class App {
           // Display initial inventory and pricing for demonstration
           System.out.printf("%-15s %-15s %-15.2f%n", "Books", inventory.isAvailable("Book", 1), pricing.getPrice("Book"));
           System.out.printf("%-15s %-15s %-15.2f%n", "Stationary", inventory.isAvailable("Stationary", 1), pricing.getPrice("Stationary"));
-          System.out.printf("%-15s %-15s %-15.2f%n", "Pencils", inventory.isAvailable("Pencil", 1), pricing.getPrice("Pencil"));
+          System.out.printf("%-15s %-15s %-15.2f%n", "Pencils", inventory.isAvailable("Pencil", 1), Pencil.getprice());
           System.out.printf("%-15s %-15s %-15.2f%n", "Pens", inventory.isAvailable("Pen", 1), pricing.getPrice("Pen"));
   
           // Perform some sales transactions and show results

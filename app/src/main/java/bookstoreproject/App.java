@@ -14,17 +14,13 @@ public class App {
 
     public static void main(String[] args) {
         System.out.println(new App().makeAnnouncement());
-        // Initialize the Inventory, Pricing, and Sales classes
+        //Initialize the Inventory, Pricing, and Sales classes
         Inventory inventory = new Inventory();
-        // Pricing pricing = new Pricing();
-        //Pricing pricing = new Book();
         Sales sales = new Sales(inventory);
         Pricing Book = new Book();
         Pricing Stationary = new Stationary();
         Pricing Pencil = new Pencil();
         Pricing Pen = new Pen();
-//testing
-//testing part 2
 
           // Header
           System.out.printf("%-15s %-15s %-15s%n", "Product", "Availability", "Price");

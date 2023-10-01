@@ -7,8 +7,7 @@ import bookstoreproject.pricing.*;
 public class Sales {
 
     private Inventory inventory;
-    private Pricing pricing;
-    
+
     public Sales(Inventory inventory) {
         this.inventory = inventory;
     }
@@ -37,14 +36,12 @@ public class Sales {
             default:
                 throw new IllegalArgumentException("Invalid product type: " + productType);
         }
-        double price = product.getprice(); //change
-        //double price = productType.getPrice();
+        double price = product.getprice();
         boolean isAvailable = inventory.isAvailable(productType, quantity);
 
         if (isAvailable) {
             inventory.decrementStock(productType, quantity);
             
-            // Update Sales Counter (assuming it's a static class)
             SalesCounter.updateTotalSales(price * quantity);
             SalesCounter.updateTotalUnits(quantity);
             return true;

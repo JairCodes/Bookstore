@@ -7,16 +7,11 @@ import bookstoreproject.pricing.*;
 public class Sales {
 
     private Inventory inventory;
-    //private Pricing pricing;
-    
+
     public Sales(Inventory inventory){
         this.inventory = inventory;
     }
-    // public Sales(Inventory inventory, Pricing pricing) {
-    //     this.inventory = inventory;
-    // }
-
-    
+  
     public boolean makeSale(String productType, int quantity) {
 
         Pricing product = null;
